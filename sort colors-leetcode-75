@@ -1,0 +1,25 @@
+class Solution {
+    public void sortColors(int[] nums) {
+        int cz=0;
+        int oz=0;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==0){
+                cz++;
+            }
+            else if(nums[i]==1){
+                oz++;
+            }
+        }
+        
+        for(int i=0;i<cz;i++){
+            nums[i]=0;
+        }
+        for(int i=cz;i<cz+oz;i++){
+            nums[i]=1;
+        }
+        for(int i=cz+oz;i<nums.length;i++){
+            nums[i]=2;
+        }
+
+    }
+}
